@@ -1,0 +1,430 @@
+.navbar {
+  background: linear-gradient(#130f40, #313233);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  /* Slightly darker shadow */
+  position: relative;
+  top: 0px;
+  width: 100%;
+  min-width: 1300px;
+  height: 830px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: topToBottom 0.5s ease-in-out;
+  margin: auto;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+
+
+@keyframes topToBottom {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-detail-top {
+  width: 315%;
+}
+
+.carousel-container {
+  max-width: 440px;
+  height: auto;
+  display: flex;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #34495E, #2C3E50);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex: 1;
+}
+
+.carousel-container:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
+  /* Darker and larger shadow on hover */
+}
+
+.carousel .slide img {
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  /* Ensure images have matching border-radius */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  /* Shadow effect for images */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* Add transition effects */
+}
+
+.carousel .slide img:hover {
+  transform: scale(1.1);
+  /* Slightly enlarge image on hover */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+  /* Darker and larger shadow on hover */
+}
+
+/* Style for carousel buttons */
+.carousel-button {
+  width: 40px;
+  height: 40px;
+  background-color: #2980B9;
+  /* Blue background color */
+  border: none;
+  /* Remove default button border */
+  border-radius: 50%;
+  /* Make the button round */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  /* Add shadow effect */
+  color: white;
+  /* White icon color */
+  font-size: 18px;
+  /* Increase icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* Add transition effects */
+  position: absolute;
+  /* Position absolutely */
+  top: 50%;
+  /* Center vertically */
+  transform: translateY(-50%);
+  /* Center vertically */
+}
+
+.carousel-button:hover {
+  transform: scale(1.1);
+  /* Slightly enlarge button on hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  /* Darker and larger shadow on hover */
+}
+
+.carousel-button:active {
+  transform: scale(0.9);
+  /* Slightly shrink button on active state */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  /* Reduce shadow on active state */
+}
+
+.introduce-right {
+  text-align: left;
+  padding-left: 265px;
+  padding-bottom: 200px;
+  background-color: #f9f9f900;
+  margin: 20px auto;
+  /* Di chuyển phần tử lên trên để cách navbar */
+  max-width: 900px;
+  width: 100%;
+}
+
+.introduce-right h3 {
+  font-size: 24px;
+  color: #f5f3f3;
+  margin-bottom: 20px;
+  /* Tăng khoảng cách dòng giữa tiêu đề */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Đổ bóng văn bản */
+}
+
+.introduce-right h1,
+.introduce-right h2 {
+  font-size: 48px;
+  color: #0073e6;
+  margin: 20px 0;
+  /* Tăng khoảng cách trên và dưới cho tiêu đề */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Đổ bóng văn bản */
+}
+
+.introduce-right h4 {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.introduce-right button {
+  padding: 12px 24px;
+  /* Tăng kích thước của nút */
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3366FF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Đổ bóng văn bản */
+}
+
+.introduce-right button:hover {
+  background-color: #99FF00;
+  color: #003333;
+}
+
+.introduce-right button:active {
+  transform: scale(0.9);
+  /* Giảm kích thước của nút khi nhấn */
+}
+
+
+
+.sidebar-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  flex: 1;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 100%;
+  height: 100%;
+  background-color: #34495E;
+  /* Darker background for sidebar */
+  padding-top: 60px;
+  box-shadow: 0px 0 5px rgba(0, 0, 0, 0.2);
+  color: #ECF0F1;
+  /* Light text for contrast */
+}
+
+/* Adding hover effects for interactivity */
+
+.buttonGroup button {
+  background-color: #2980B9;
+  /* Bright blue for buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.buttonGroup button:hover {
+  background-color: #1ABC9C;
+  /* Change to teal on hover */
+}
+
+/* .right-boxes {
+    display: flex;
+} */
+
+.box {
+  width: 80%;
+  height: 100px;
+  background-color: #ccc;
+}
+
+
+.user-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+  height: 100vh;
+}
+
+
+h1 {
+  margin-bottom: 20px;
+  color: #050005;
+  font-size: 50px;
+  /* Kích thước font */
+  font-weight: bold;
+  /* Độ đậm của font */
+  text-transform: uppercase;
+  /* Chuyển đổi thành chữ in hoa */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  /* Hiệu ứng đổ bóng */
+  transition: text-shadow 0.3s ease-in-out;
+  /* Hiệu ứng transition */
+}
+
+h1:hover {
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  /* Hiệu ứng đổ bóng khi hover */
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.user-card {
+  display: flex;
+  /* Sử dụng flexbox để căn chỉnh nội dung */
+  flex-direction: column;
+  /* Sắp xếp các phần tử theo chiều dọc */
+  justify-content: center;
+  /* Canh chỉnh nội dung theo chiều dọc vào giữa */
+  align-items: center;
+  /* Canh chỉnh nội dung theo chiều ngang vào giữa */
+  width: calc(25% - 40px);
+  /* 25% để có 4 ô trên một hàng và trừ đi 40px để tính toán khoảng cách giữa các ô */
+  margin: 50px;
+  /* Khoảng cách giữa các ô */
+  border: 5px solid #351296;
+  /* Tạo viền cho ô */
+  border-radius: 10px;
+  /* Làm mềm góc của ô */
+  overflow: hidden;
+  padding: 10px;
+  /* Tạo hình vuông cho viền bằng cách thiết lập padding */
+  background-color: #fff;
+  /* Màu nền cho ô */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Thêm shadow cho ô */
+  transition: transform 0.3s ease-in-out;
+  text-align: left;
+}
+
+
+@media screen and (max-width: 768px) {
+  .user-card {
+    width: calc(100% - 40px);
+  }
+}
+
+
+.image-container {
+  width: 100%;
+  height: 250px;
+  /* Điều chỉnh chiều cao tùy ý */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.user-image {
+  width: 100%;
+  /* Sử dụng 100% để hình ảnh đầy đủ chiếm width của .image-container */
+  height: 100%;
+  /* Sử dụng 100% để hình ảnh đầy đủ chiếm height của .image-container */
+  object-fit: cover;
+}
+
+
+.user-card:hover {
+  transform: translateY(-30px);
+}
+
+.user-card h2 {
+  margin: 10px 0;
+  /* Giảm khoảng cách giữa tiêu đề và các thông tin */
+  color: #333;
+  /* Màu chữ */
+}
+
+.user-card p {
+  margin: 5px 0;
+  /* Giảm khoảng cách giữa các dòng thông tin */
+  color: #666;
+  /* Màu chữ */
+}
+
+.user-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-details {
+  width: 22%;
+  height: 650px;
+  padding: 100px;
+  background-color: #FAEBD7;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.user-details img {
+  width: 520px;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 5px;
+}
+
+.user-details button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom:5px;
+}
+
+.user-details button:hover {
+  background-color: #cc0000;
+}
+
+.download-details button {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3366FF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 850px;
+  bottom: 110px;
+}
+
+.download-details button:hover {
+  background-color: #99FF00;
+  color: #003333;
+}
+
+.download-details button:active {
+  transform: scale(0.9);
+}
+

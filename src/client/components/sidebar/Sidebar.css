@@ -1,0 +1,171 @@
+.sidebar {
+  width: 200px;
+  height: 770px;
+  background: linear-gradient(145deg, #30336B, #130f40, #003399);
+  /* Gradient background with deep tech tones */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  /* Enhanced shadow for depth */
+  color: #FFFFFF;
+  /* Light text color for contrast */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* Smooth transition for hover effects */
+  position: relative;
+  /* Required for pseudo-element */
+  border-radius: 0px;
+}
+
+
+.sidebar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  /* Soft overlay for premium feel */
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with button clicks */
+}
+
+.logoContainer {
+  position: relative;
+  width: 100px;
+  /* Adjust the width as needed */
+  height: 100px;
+  /* Adjust the height as needed */
+}
+
+.logoContainer img {
+  position: absolute;
+  top: -30px;
+  left: 19.5px;
+  width: 150%;
+  /* Make the image fill the container */
+  height: 150%;
+  /* Make the image fill the container */
+  object-fit: cover;
+  /* Maintain aspect ratio and cover the container */
+  border-radius: 100px;
+  border: 5px solid #FFCC33;
+  /* Add a blue border */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  /* Add shadow effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  /* Add transition effects */
+}
+
+.logoContainer img:hover {
+  border-color:#33FF00;
+  /* Change border color on hover */
+}
+
+.logoContainer img:active {
+  transform: scale(0.9);
+  /* Shrink image on click */
+}
+
+.buttonGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* Align buttons to the top */
+  height: auto;
+  /* Adjust height to fit buttons */
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.buttonGroup button {
+  width: 100%;
+  /* Full width */
+  height: 75px;
+  /* Adjust height as needed */
+  border: none;
+  background: linear-gradient(145deg, #00040e, #336666);
+  /* Gradient background for buttons with deep tech tones */
+  color: white;
+  font-size: 18px;
+  /* Adjust font size as needed */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition for hover effects */
+  text-align: center;
+  /* Center text within buttons */
+  position: relative;
+  /* Required for pseudo-element */
+  overflow: hidden;
+  /* Hide overflow for effect */
+  margin-top: 10px;
+  /* Remove margin to have buttons next to each other */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Add border for separation */
+}
+
+.buttonGroup button:last-child {
+  border-bottom: none;
+  /* Remove bottom border from the last button */
+}
+
+.buttonGroup button:focus {
+  z-index: 2;
+  /* Increase z-index when button is focused */
+}
+
+.buttonGroup button:hover {
+  background: #FFCC33;
+  /* Change background color on hover */
+  transform: scale(1.02);
+  /* Slightly enlarge button on hover */
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
+  /* Softer shadow */
+}
+
+.buttonGroup button.selected {
+  background: #FFCC33;
+  /* Keep background color when selected */
+  transform: scale(1.02);
+  /* Slightly enlarge button */
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
+  /* Softer shadow */
+  color: #003333;
+  font-weight: bold;
+}
+
+
+.contactGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* Align buttons to the top */
+  height: auto;
+  /* Adjust height to fit buttons */
+  margin-top: 6px;
+
+}
+
+.contactGroup img {
+  margin-top: 20px;
+  position: relative;
+  width: 60px;
+  /* Đặt kích thước cố định hoặc phần trăm */
+  height: 60px;
+  object-fit: cover;
+  border-radius: 100px;
+  border: 3px solid #06507e;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+
+.contactGroup img:hover {
+  border-color: #33FF00;
+  /* Change border color on hover */
+}
+
+.contactGroup img:active {
+  transform: scale(0.5);
+}
