@@ -1,0 +1,114 @@
+.contact {
+    background: linear-gradient(#130f40, #313233);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    /* Slightly darker shadow */
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 900px;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    left: 0px;
+}
+
+.contact h1 {
+    font-size: 2.5em;
+    background: #FFCC33;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 55px;
+    margin-right: 210px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 300px;
+    ;
+    margin-right: 290px;
+    margin-top: 40px;
+}
+
+.contact-form label {
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.contact-form input {
+    width: 110%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #FFCC33;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.contact-form textarea {
+    width: 110%;
+    padding: 15px;
+    height: 250px;
+    margin-top: 10px;
+    border: 1px solid #FFCC33;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #f8f7f7;
+}
+
+.contact-form button {
+    width: 116.5%;
+    /* Full width */
+    height: 75px;
+    /* Adjust height as needed */
+    border: none;
+    background: linear-gradient(145deg, #00040e, #336666);
+    /* Gradient background for buttons with deep tech tones */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    /* Adjust font size as needed */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover effects */
+    text-align: center;
+    /* Center text within buttons */
+    position: relative;
+    /* Required for pseudo-element */
+    overflow: hidden;
+    /* Hide overflow for effect */
+    margin-top: 10px;
+    /* Remove margin to have buttons next to each other */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Add border for separation */
+    border-radius: 15px;
+}
+
+.contact-form button:last-child {
+    border-bottom: none;
+    /* Remove bottom border from the last button */
+}
+
+.contact-form button:focus {
+    z-index: 2;
+    /* Increase z-index when button is focused */
+}
+
+.contact-form button:hover {
+    background: #FFCC33;
+    /* Change background color on hover */
+    transform: scale(1.02);
+    /* Slightly enlarge button on hover */
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    /* Softer shadow */
+}
+

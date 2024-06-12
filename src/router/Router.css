@@ -1,7 +1,5 @@
 .router-container {
   position: absolute;
-  left: 100px;
-  right: 100px;
-  top: 45px;
-}
+  width: 100%;
   
+}

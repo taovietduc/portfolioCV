@@ -2,22 +2,17 @@
   background: linear-gradient(#130f40, #313233);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
   /* Slightly darker shadow */
-  position: relative;
-  top: 0px;
+  position: absolute;
   width: 100%;
-  min-width: 1300px;
-  height: 830px;
+  height: 930px;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   animation: topToBottom 0.5s ease-in-out;
-  margin: auto;
-  margin-top: 20px;
   flex-direction: column;
+  
 }
-
-
 
 @keyframes topToBottom {
   from {
@@ -40,7 +35,7 @@
 }
 
 .carousel-container {
-  max-width: 440px;
+  max-width: 445px;
   height: auto;
   display: flex;
   position: absolute;
@@ -54,6 +49,7 @@
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   flex: 1;
+  z-index: -1000;
 }
 
 .carousel-container:hover {
@@ -68,10 +64,11 @@
   object-fit: cover;
   border-radius: 15px;
   /* Ensure images have matching border-radius */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
   /* Shadow effect for images */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   /* Add transition effects */
+  z-index: -1000;
 }
 
 .carousel .slide img:hover {
@@ -110,6 +107,7 @@
   /* Center vertically */
   transform: translateY(-50%);
   /* Center vertically */
+  z-index: -1000;
 }
 
 .carousel-button:hover {
@@ -126,6 +124,8 @@
   /* Reduce shadow on active state */
 }
 
+
+
 .introduce-right {
   text-align: left;
   padding-left: 265px;
@@ -133,13 +133,62 @@
   background-color: #f9f9f900;
   margin: 20px auto;
   /* Di chuyển phần tử lên trên để cách navbar */
-  max-width: 900px;
+  max-width: 115 0px;
+  margin-top: 50px;
+  max-width: 1150px;
+}
+
+.introduce-right .line-home {
   width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #00040e, #336666);
+  overflow: hidden;
+  margin-top: -110px;
+  margin-bottom: -50px;
+}
+
+.introduce-right .line-home .line-slide-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  animation: line-slide 1s linear infinite;
+  font-size: 25px;
+  color: #FFCC33;
+}
+
+.introduce-right .line-home .line-slide-home .icon{
+  /* display: block; */
+  padding: 10px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  color: black;
+  color-scheme: black;
+  /* Bóng đổ cho hình ảnh png */
+  filter: drop-shadow(0 0 1s5px rgba(0, 0, 0, 0.5));
+  margin-left: 100px;
+}
+
+/* Di chuyển liên tục qua trái */
+@keyframes line-slide-home {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
 }
 
 .introduce-right h3 {
   font-size: 24px;
   color: #f5f3f3;
+  margin-top: 180px;
   margin-bottom: 20px;
   /* Tăng khoảng cách dòng giữa tiêu đề */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -192,11 +241,11 @@
 
 
 .sidebar-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 200px;
-  height: 100%;
+  z-index: 1;
   flex: 1;
 }
 
@@ -209,6 +258,7 @@
   padding-top: 60px;
   box-shadow: 0px 0 5px rgba(0, 0, 0, 0.2);
   color: #ECF0F1;
+  z-index: 1;
   /* Light text for contrast */
 }
 
@@ -240,120 +290,6 @@
   background-color: #ccc;
 }
 
-
-.user-container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  overflow: auto;
-  height: 100vh;
-}
-
-
-h1 {
-  margin-bottom: 20px;
-  color: #050005;
-  font-size: 50px;
-  /* Kích thước font */
-  font-weight: bold;
-  /* Độ đậm của font */
-  text-transform: uppercase;
-  /* Chuyển đổi thành chữ in hoa */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  /* Hiệu ứng đổ bóng */
-  transition: text-shadow 0.3s ease-in-out;
-  /* Hiệu ứng transition */
-}
-
-h1:hover {
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
-  /* Hiệu ứng đổ bóng khi hover */
-}
-
-.user-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.user-card {
-  display: flex;
-  /* Sử dụng flexbox để căn chỉnh nội dung */
-  flex-direction: column;
-  /* Sắp xếp các phần tử theo chiều dọc */
-  justify-content: center;
-  /* Canh chỉnh nội dung theo chiều dọc vào giữa */
-  align-items: center;
-  /* Canh chỉnh nội dung theo chiều ngang vào giữa */
-  width: calc(25% - 40px);
-  /* 25% để có 4 ô trên một hàng và trừ đi 40px để tính toán khoảng cách giữa các ô */
-  margin: 50px;
-  /* Khoảng cách giữa các ô */
-  border: 5px solid #351296;
-  /* Tạo viền cho ô */
-  border-radius: 10px;
-  /* Làm mềm góc của ô */
-  overflow: hidden;
-  padding: 10px;
-  /* Tạo hình vuông cho viền bằng cách thiết lập padding */
-  background-color: #fff;
-  /* Màu nền cho ô */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* Thêm shadow cho ô */
-  transition: transform 0.3s ease-in-out;
-  text-align: left;
-}
-
-
-@media screen and (max-width: 768px) {
-  .user-card {
-    width: calc(100% - 40px);
-  }
-}
-
-
-.image-container {
-  width: 100%;
-  height: 250px;
-  /* Điều chỉnh chiều cao tùy ý */
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.user-image {
-  width: 100%;
-  /* Sử dụng 100% để hình ảnh đầy đủ chiếm width của .image-container */
-  height: 100%;
-  /* Sử dụng 100% để hình ảnh đầy đủ chiếm height của .image-container */
-  object-fit: cover;
-}
-
-
-.user-card:hover {
-  transform: translateY(-30px);
-}
-
-.user-card h2 {
-  margin: 10px 0;
-  /* Giảm khoảng cách giữa tiêu đề và các thông tin */
-  color: #333;
-  /* Màu chữ */
-}
-
-.user-card p {
-  margin: 5px 0;
-  /* Giảm khoảng cách giữa các dòng thông tin */
-  color: #666;
-  /* Màu chữ */
-}
-
 .user-details-overlay {
   position: fixed;
   top: 0;
@@ -364,11 +300,12 @@ h1:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2000;
 }
 
 .user-details {
   width: 22%;
-  height: 650px;
+  height: 720px;
   padding: 100px;
   background-color: #FAEBD7;
   border-radius: 10px;
@@ -380,11 +317,11 @@ h1:hover {
 }
 
 .user-details img {
-  width: 520px;
+  width: 590px;
   height: auto;
   object-fit: cover;
   position: absolute;
-  top: 5px;
+  top: 10px;
 }
 
 .user-details button {
@@ -396,7 +333,8 @@ h1:hover {
   position: absolute;
   display: flex;
   justify-content: center;
-  bottom:5px;
+  bottom: 14px;
+  left: 360px;
 }
 
 .user-details button:hover {
@@ -415,8 +353,8 @@ h1:hover {
   transition: background-color 0.3s;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   position: absolute;
-  left: 850px;
-  bottom: 110px;
+  left: 790px;
+  bottom: 33px;
 }
 
 .download-details button:hover {
@@ -428,3 +366,80 @@ h1:hover {
   transform: scale(0.9);
 }
 
+.footer {
+  margin-top: -100px;
+  width: 100%;
+  height: 89px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  border-top: 1px solid #7b7a76;
+}
+
+.footer a {
+  color: #ffa500;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media  (max-width: 768px) {
+  .introduce-right {
+    padding-left: 0;
+  }
+
+  .introduce-right h3 {
+    margin-top: 100px;
+  }
+
+  .introduce-right .line-home {
+    margin-top: -50px;
+  }
+
+  .introduce-right .line-home .line-slide-home {
+    font-size: 20px;
+  }
+
+  .introduce-right h1,
+  .introduce-right h2 {
+    font-size: 36px;
+  }
+
+  .introduce-right h4 {
+    font-size: 16px;
+  }
+
+  .introduce-right button {
+    font-size: 16px;
+  }
+
+  .carousel-container {
+    max-width: 300px;
+  }
+
+  .carousel .slide img {
+    height: 200px;
+  }
+
+  .carousel-button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .introduce-right button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .download-details button {
+    font-size: 16px;
+  }
+  
+}

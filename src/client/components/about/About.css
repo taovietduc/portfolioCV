@@ -1,0 +1,265 @@
+.about {
+    background: linear-gradient(#130f40, #313233);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 900px;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.intro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 250px;
+    color: #FFCC33;
+}
+
+.intro h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right, transparent, black 50%, transparent);
+    mask-size: 100%;
+    margin-top: 300px;
+}
+
+.line-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #004cff 0%, #ffffff 100%);
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.line-container .line-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    animation: line-slide 3s linear infinite;
+}
+
+.line-container .line-slide .icon {
+
+    padding: 10px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    color: black;
+    color-scheme: black;
+
+    filter: drop-shadow(0 0 1s5px rgba(0, 0, 0, 0.5));
+    margin-left: 100px;
+}
+
+
+@keyframes line-slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.hybrid {
+    height: 100vh;
+
+}
+
+.hybrid-bottom {
+    flex-direction: column;
+    gap: 20px;
+    /* Khoảng cách giữa các phần tử */
+    padding: 20px;
+    background: linear-gradient(#130f40, #313233);
+    position: sticky;
+    text-align: center;
+    
+    
+
+}
+
+.service-detail-bottom-1 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    width: 100%;
+
+} 
+
+.service-detail-bottom-1:hover {
+    transform: translateY(-5px);
+    /* Move the section up slightly on hover */
+    transition: transform 0.3s ease;
+    /* Add a smooth transition */
+}
+
+
+.service-detail-image-container-1 {
+    flex: 1;
+    position: relative;
+}
+
+.service-detail-image-1 {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.service-detail-image:hover::after {
+    content: '';
+    /* Add an overlay element */
+    position: absolute;
+    /* Position the overlay */
+    top: 0;
+    /* Position from the top */
+    left: 0;
+    /* Position from the left */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black */
+    opacity: 1;
+    /* Initially transparent */
+    transition: opacity 0.3s ease;
+    /* Add a smooth transition */
+}
+
+.service-detail-info-1 {
+    flex: 2;
+    background-color: #f9f9f9;
+    /* Màu nền cho ô thông tin */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.5s ease;
+}
+
+.service-detail-bottom-1:hover .service-detail-info-1 {
+    opacity: 1;
+    /* Fade in the room information on hover */
+}
+
+.service-detail-info-1 h2 {
+    margin-top: 0;
+}
+
+.service-detail-info-1 p {
+    margin-bottom: 10px;
+}
+
+
+.hybrid-top {
+
+    position: sticky;
+    text-align: center;
+}
+
+.scroll_container {
+    background: linear-gradient(#130f40, #313233);
+    margin: 0px;
+    height: 300vh;
+
+}
+
+.sticky_wrap {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    margin-top: -10px;
+
+}
+
+.horizontal_scroll {
+    /* position: absolute;
+    top: 0;
+    height: auto;
+    width: 100%;
+    will-change: transform;
+    display: flex;
+    justify-content: space-between; */
+    display: flex;
+
+
+
+}
+
+.scroll_contents {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    /* Chiều rộng tối thiểu của khung ảnh */
+    flex-shrink: 0;
+    width: 100%;
+    scroll-snap-align: start;
+    gap: 750px;
+    margin-left: 1320px;
+
+}
+
+.scroll_contents img {
+    max-height: 50%;
+    max-width: 50%;
+    object-fit: contain;
+    /* Giữ nguyên tỉ lệ ảnh và chứa trong khung */
+    margin-top: -500px;
+    margin-bottom: 520px;
+
+
+
+}
+
+.left {
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+
+.right {
+    text-align: right;
+    margin-top: 5vh;
+    margin-right: 5vw;
+}
+

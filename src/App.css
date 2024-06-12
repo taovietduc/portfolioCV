@@ -1,22 +1,11 @@
-/* App.css */
+App.css
 html, body, #root {
+  height: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Set the default font family to Roboto */
+  color: #fff; /* Set the default text color to white */
+  overflow-x: hidden;
+}
 
-    height: 0;
-    margin: 0;
-  }
-  
-  .app-container {
-    background: linear-gradient(to right,#171721, #872B97 , #FF7130, #FF3C68 ); /* Set the background color to black */
-    min-height: 100vh; /* Ensure the background covers the full viewport height */
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif; /* Set the default font family to Roboto */
-    color: #fff; /* Set the default text color to white */
-    overflow: hidden;
-  }
   
   
